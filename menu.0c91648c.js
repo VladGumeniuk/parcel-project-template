@@ -117,83 +117,19 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\images\\hero\\mob-icecream.png":[["mob-icecream.3f613c0a.png","images/hero/mob-icecream.png"],"images/hero/mob-icecream.png"],"./..\\images\\hero\\mob-icecream@2x.png":[["mob-icecream@2x.572439fb.png","images/hero/mob-icecream@2x.png"],"images/hero/mob-icecream@2x.png"],"./..\\images\\hero\\tab-icecream@2x.png":[["tab-icecream@2x.2d37a2fa.png","images/hero/tab-icecream@2x.png"],"images/hero/tab-icecream@2x.png"],"./..\\images\\hero\\tab-icecream.png":[["tab-icecream.8f547022.png","images/hero/tab-icecream.png"],"images/hero/tab-icecream.png"],"./..\\images\\hero\\desktop-icecream@2x.png":[["desktop-icecream@2x.8ab43183.png","images/hero/desktop-icecream@2x.png"],"images/hero/desktop-icecream@2x.png"],"./..\\images\\hero\\desktop-icecream.png":[["desktop-icecream.496d7e08.png","images/hero/desktop-icecream.png"],"images/hero/desktop-icecream.png"],"./..\\images\\how-its-made\\mob-milk-background.png":[["mob-milk-background.9c465e94.png","images/how-its-made/mob-milk-background.png"],"images/how-its-made/mob-milk-background.png"],"./..\\images\\how-its-made\\desktop-milk-background.png":[["desktop-milk-background.2fc1fea0.png","images/how-its-made/desktop-milk-background.png"],"images/how-its-made/desktop-milk-background.png"],"./..\\images\\icon\\icon-bucket-milk.png":[["icon-bucket-milk.b689e420.png","images/icon/icon-bucket-milk.png"],"images/icon/icon-bucket-milk.png"],"./..\\images\\icon\\icon-bucket-apple.png":[["icon-bucket-apple.6456c296.png","images/icon/icon-bucket-apple.png"],"images/icon/icon-bucket-apple.png"],"./..\\images\\icon\\icon-heart.png":[["icon-heart.8ef0378f.png","images/icon/icon-heart.png"],"images/icon/icon-heart.png"],"./..\\images\\locations\\desktop-locations-backgroung.png":[["desktop-locations-backgroung.1e70c0ed.png","images/locations/desktop-locations-backgroung.png"],"images/locations/desktop-locations-backgroung.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"js/menu.js":[function(require,module,exports) {
+(function () {
+  var menuBtnRef = document.querySelector("[data-menu-button]");
+  var mobileMenuRef = document.querySelector("[data-menu]");
+  var mobileBtnClose = document.querySelector("[data-menu-close]");
+  menuBtnRef.addEventListener("click", function () {
+    mobileMenuRef.classList.toggle("is-open");
+  });
+  mobileBtnClose.addEventListener('click', function () {
+    mobileMenuRef.classList.toggle("is-open");
+  });
+})();
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,5 +333,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/menu.js"], null)
+//# sourceMappingURL=/menu.0c91648c.js.map

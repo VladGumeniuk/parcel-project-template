@@ -26,6 +26,14 @@
   );
 }
 
+.review-dotline {
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #c7133e;
+  border-radius: 50%;
+}
+
 .review-name {
   text-align: center;
 }

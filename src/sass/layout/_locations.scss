@@ -18,45 +18,46 @@
     width: 100vw;
     height: 1390px;
     background-color: var(--description-background-color);
+}
 
-    & .container {
-        position: relative;
-    }
+.locations .container {
+    position: relative;
+}
 
-    &-list {
-        width: 220px;
+.locations-list {
+    width: 220px;
+}
 
-        &-item {
-            width: 220px;
-            height: 427px;
-            padding: 43px 20px;
-            
-            margin-left: auto;
-            margin-right: auto;
-                   
-            background-color: var(--primary-white-color);
-            box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-            border-radius: 24px;
-
-            &:not(:last-child) {
-                margin-bottom: 20px;
-            }
-        }
-    }
-
-    &-item-title {
-        width: 80px;
-        height: 16px;
-        
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 1.41;
-        text-align: center;
-        color: var(--primary-white-color);
+.locations-list-item {
+    width: 220px;
+    height: 427px;
+    padding: 43px 20px;
     
-        background-color: var(--location-cafe-color);
-        border-radius: 4px;
-    }
+    margin-left: auto;
+    margin-right: auto;
+           
+    background-color: var(--primary-white-color);
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+}
+
+
+.locations-list-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.locations-item-title {
+    width: 80px;
+    height: 16px;
+    
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.41;
+    text-align: center;
+    color: var(--primary-white-color);
+
+    background-color: var(--location-cafe-color);
+    border-radius: 4px;
 }
 
 .location-positioning {
@@ -123,7 +124,6 @@
     .locations {
         height: 595px;
         width: 100vw;
-        margin-top: 197px;
     }
 
     .location-positioning {
@@ -221,7 +221,6 @@
         background-position: center; 
         background-size: contain;
         height: 620px;
-        margin-top: 234px;
     }
     
     .location-positioning {

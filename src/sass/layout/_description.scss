@@ -28,7 +28,7 @@ html {
   .how-its-made {
     padding: 125px 115px 310px 115px;
     background-repeat: no-repeat;
-    background-position: center, 30%;
+    background-position: center;
     background-image: url('../images/how-its-made/desktop-milk-background.png');
   }
 }
@@ -146,20 +146,18 @@ html {
   line-height: 1.62;
   color: #000000;
   margin-bottom: 25px;
-}
-@media screen and (min-width: 768px) {
-  .primary-text {
+
+  @include for-size(tablet) {
     font-size: 14px;
     line-height: 1.76;
     margin-bottom: 30px;
   }
-}
-@media screen and (min-width: 1280px) {
-  .primary-text {
+
+  @include for-size(desktop) {
     font-size: 16px;
     line-height: 1.76;
     letter-spacing: 0.04em;
-    margin-bottom: 0px;
+    margin-bottom: 35px;
   }
 }
 

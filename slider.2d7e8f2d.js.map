@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/slider.js"],"names":["$","slick","dots"],"mappings":";AAAAA,EAAE,kBAAkBC,MAAM,CACtBC,MAAM","file":"slider.2d7e8f2d.js","sourceRoot":"..\\src","sourcesContent":["$('.review-slider').slick({\r\n    dots: true\r\n});"]}

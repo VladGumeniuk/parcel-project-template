@@ -1,5 +1,7 @@
 .hero {
   display: block;
+  position: relative;
+  z-index: 3;
   height: 502px;
   background-image: url(../images/hero/mob-icecream.png),
     radial-gradient(

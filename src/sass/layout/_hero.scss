@@ -11,7 +11,7 @@
     );
   background-size: 171px, cover;
   background-repeat: no-repeat;
-  background-position: left 63% bottom 0, left 0 top 0;
+  background-position: left 63% bottom 0;
 
   @media screen and (min-device-pixel-ratio: 2) and (min-width: 280px) and (max-width: 767px),
     screen and (min-resolution: 192dpi) and (min-width: 280px) and (max-width: 767px),
@@ -35,7 +35,7 @@
         var(--hero-background-color) 162px
       );
     background-size: 143px, cover;
-    background-position: left 58.5% bottom 0, left 0 top 0;
+    background-position: left 58.5% bottom 0;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -47,7 +47,7 @@
         var(--hero-background-color) 162px
       );
     background-size: 143px, cover;
-    background-position: left 58.5% bottom 0, left 0 top 0;
+    background-position: left 58.5% bottom 0;
   }
 
   @media screen and (min-device-pixel-ratio: 2) and (min-width: 1280px),
@@ -61,7 +61,7 @@
         var(--hero-background-color) 269px
       );
     background-size: 236px, cover;
-    background-position: left 56% bottom 0, left 0 top 0;
+    background-position: left 56% bottom 0;
   }
 
   @media screen and (min-width: 1280px) {
@@ -73,7 +73,7 @@
         var(--hero-background-color) 269px
       );
     background-size: 236px, cover;
-    background-position: left 56% bottom 0, left 0 top 0;
+    background-position: left 56% bottom 0;
   }
 }
 

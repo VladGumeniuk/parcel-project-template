@@ -1,0 +1,115 @@
+<!------------ Модальное окно ---------->
+
+<div class="backdrop is-hidden" data-modal>
+  <form action="#" class="modal">
+    <h2 class="titul-two">Make order</h2>
+    <div class="modal-product-block">
+      <label class="modal-product-label">
+        <picture>
+          <source
+            srcset="
+              ./images/products/mob-product1-min.png    1x,
+              ./images/products/mob-product1@2x-min.png 2x
+            "
+          />
+          <img
+            src="./images/products/mob-product1-min.png"
+            alt="product"
+            class="modal-product-img"
+          />
+        </picture>
+        Ice Cream
+        <input
+          type="checkbox"
+          name="products"
+          value="ice-cream"
+          class="modal-product"
+        />
+      </label>
+      <label class="modal-product-label">
+        <picture>
+          <source
+            srcset="
+              ./images/products/mob-product2-min.png    1x,
+              ./images/products/mob-product2@2x-min.png 2x
+            "
+          />
+          <img
+            src="./images/products/mob-product2-min.png"
+            alt="product"
+            class="modal-product-img"
+          />
+        </picture>
+        Ice Coffee
+        <input
+          type="checkbox"
+          name="products"
+          value="ice-coffee"
+          class="modal-product"
+        />
+      </label>
+      <label class="modal-product-label">
+        <picture>
+          <source
+            srcset="
+              ./images/products/mob-product3-min.png    1x,
+              ./images/products/mob-product3@2x-min.png 2x
+            "
+          />
+          <img
+            src="./images/products/mob-product3-min.png"
+            alt="product"
+            class="modal-product-img"
+          />
+        </picture>
+        Milkshakes
+        <input
+          type="checkbox"
+          name="products"
+          value="milkshakes"
+          class="modal-product"
+        />
+      </label>
+
+      <input
+        type="checkbox"
+        name="agree"
+        value="agree"
+        id="agree"
+        class="agree-input is-hidden"
+      />
+    </div>
+
+    <label class="modal-block secondary-text">
+      Name
+      <input type="text" name="name" placeholder="" required autofocus />
+    </label>
+    <label class="modal-block secondary-text">
+      Phone
+      <input type="tel" name="tel" placeholder="" />
+    </label>
+    <label class="modal-block secondary-text">
+      Mail
+      <input type="email" name="email" placeholder="" />
+    </label>
+
+    <div role="group" class="agree">
+      <input
+        type="checkbox"
+        name="agree"
+        value="agree"
+        id="news"
+        class="agree-input is-hidden"
+      />
+      <label for="news" class="agree-label">I agree to receive news </label>
+    </div>
+
+    <button type="submit" class="btn appeal-one">Buy now</button>
+
+    <button data-modal-close type="reset" class="icon-x">
+      <svg>
+        <use href="./images/svg/sprite.svg#icon-close-modal"></use>
+      </svg>
+    </button>
+  </form>
+</div>

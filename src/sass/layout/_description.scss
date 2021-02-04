@@ -4,11 +4,20 @@ html {
 
 .description {
   background-color: #fff5f6;
+  padding-top: 125px;
+  padding-bottom: 97px;
+
+  @include for-size(tablet) {
+    padding-top: 130px;
+    padding-bottom: 140px;
+  }
+  @include for-size(desktop) {
+    padding-top: 125px;
+    padding-bottom: 310px;
+  }
 }
 
 .how-its-made {
-  padding: 125px 20px 97px 20px;
-
   background-repeat: no-repeat;
   background-position: center;
   background-image: url('../images/how-its-made/mob-milk-background.png');
@@ -18,15 +27,10 @@ html {
     background-image: none;
   }
 }
-
-@media screen and (min-width: 768px) {
-  .how-its-made {
-    padding: 130px 36px 140px 36px;
-  }
-}
 @media screen and (min-width: 1280px) {
   .how-its-made {
-    padding: 125px 115px 310px 115px;
+    padding-left: 115px;
+    padding-right: 115px;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url('../images/how-its-made/desktop-milk-background.png');
@@ -42,15 +46,12 @@ html {
   text-transform: uppercase;
   color: #ffa5ba;
   margin-bottom: 15px;
-}
-@media screen and (min-width: 768px) {
-  .subtitle {
+
+  @include for-size(tablet) {
     font-size: 26px;
     line-height: 1.15;
   }
-}
-@media screen and (min-width: 1280px) {
-  .subtitle {
+  @include for-size(desktop) {
     font-size: 30px;
     line-height: 1.13;
     letter-spacing: 0.04em;
@@ -66,14 +67,11 @@ html {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #d41443;
-}
-@media screen and (min-width: 768px) {
-  .title {
+
+  @include for-size(tablet) {
     font-size: 48px;
   }
-}
-@media screen and (min-width: 1280px) {
-  .title {
+  @include for-size(desktop) {
     font-size: 58px;
     line-height: 1.14;
     letter-spacing: 0.06em;
@@ -107,33 +105,27 @@ html {
   padding-left: 30px;
   padding-right: 30px;
   width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .cow-text-content {
+
+  @include for-size(tablet) {
     padding-top: 59px;
     padding-left: 10px;
     padding-right: 0px;
     width: 50%;
   }
-}
-@media screen and (min-width: 1280px) {
-  .cow-text-content {
+  @include for-size(desktop) {
     padding-left: 74px;
     padding-top: 55px;
     padding-right: 3px;
   }
 }
 
-.cow-text-content-list-item {
+.cow-text-content-item {
   margin-bottom: 16px;
-}
-@media screen and (min-width: 768px) {
-  .cow-text-content-list-item {
+
+  @include for-size(tablet) {
     margin-bottom: 20px;
   }
-}
-@media screen and (min-width: 1280px) {
-  .cow-text-content-list-item {
+  @include for-size(desktop) {
     margin-bottom: 35px;
   }
 }
@@ -167,16 +159,13 @@ html {
   font-size: 12px;
   line-height: 1.62;
   color: #907e82;
-}
-@media screen and (min-width: 768px) {
-  .secondary-text {
+
+  @include for-size(tablet) {
     font-size: 14px;
     line-height: 1.76;
     letter-spacing: 0.04em;
   }
-}
-@media screen and (min-width: 1280px) {
-  .secondary-text {
+  @include for-size(desktop) {
     line-height: 1.94;
   }
 }
@@ -184,9 +173,8 @@ html {
 .fact-list {
   display: flex;
   flex-wrap: wrap;
-}
-@media screen and (min-width: 768px) {
-  .fact-list {
+
+  @include for-size(tablet) {
     flex-wrap: nowrap;
   }
 }
@@ -218,16 +206,13 @@ html {
   text-transform: uppercase;
   color: #d41443;
   margin-bottom: 18px;
-}
-@media screen and (min-width: 768px) {
-  .fact-title {
+
+  @include for-size(tablet) {
     font-size: 48px;
     margin-bottom: 22px;
     text-transform: none;
   }
-}
-@media screen and (min-width: 1280px) {
-  .fact-title {
+  @include for-size(desktop) {
     font-size: 58px;
     margin-bottom: 25px;
   }
@@ -240,15 +225,12 @@ html {
   background-repeat: no-repeat;
   margin-top: 39px;
   margin-bottom: 16px;
-}
-@media screen and (min-width: 768px) {
-  .fact-title::before {
+
+  @include for-size(tablet) {
     margin-top: 66px;
     margin-bottom: 40px;
   }
-}
-@media screen and (min-width: 1280px) {
-  .fact-title::before {
+  @include for-size(desktop) {
     margin-top: 40px;
   }
 }
@@ -276,15 +258,12 @@ html {
   font-weight: 700;
   font-size: 12px;
   line-height: 1.7;
-}
-@media screen and (min-width: 768px) {
-  .fact-text {
+
+  @include for-size(tablet) {
     font-size: 14px;
     line-height: 1.74;
   }
-}
-@media screen and (min-width: 1280px) {
-  .fact-text {
+  @include for-size(desktop) {
     font-size: 16px;
     line-height: 1.76;
     letter-spacing: 0.02em;

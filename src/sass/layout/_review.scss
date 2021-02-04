@@ -1,6 +1,6 @@
 .review {
   padding-top: 154px;
-  padding-bottom: 83px;
+  padding-bottom: 170px;
 }
 
 .review-slider {
@@ -41,8 +41,10 @@
   padding-right: 0px;
   background-image: repeating-linear-gradient(
     to top,
-    #e1e1e1 0px 1px,
-    transparent 1px 36px
+    #e1e1e1 0px,
+    #e1e1e1 1px,
+    transparent 1px,
+    transparent 36px
   );
 }
 
@@ -92,6 +94,7 @@
 
   .review {
     padding-top: 238px;
+    padding-bottom: 0px;
   }
 
   .review-wrapper {
@@ -118,15 +121,17 @@
     padding: 0 4px;
     background-image: repeating-linear-gradient(
       to top,
-      #e1e1e1 0px 1px,
-      transparent 1px 31px
+      #e1e1e1 0px,
+      #e1e1e1 1px,
+      transparent 1px,
+      transparent 31px
     );
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .review .container {
-    width: 1200px;
+    width: 1280px;
   }
 
   .review {

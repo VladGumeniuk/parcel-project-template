@@ -4,7 +4,14 @@
   <form action="#" class="modal">
     <h2 class="titul-two">Make order</h2>
     <div class="modal-product-block">
-      <label class="modal-product-label">
+      <input
+        type="checkbox"
+        name="products"
+        value="ice-cream"
+        class="modal-product ice-cream is-hidden"
+        id="ice-cream"
+      />
+      <label for="ice-cream" class="modal-product-label ice-cream">
         <picture>
           <source
             srcset="
@@ -19,14 +26,15 @@
           />
         </picture>
         Ice Cream
-        <input
-          type="checkbox"
-          name="products"
-          value="ice-cream"
-          class="modal-product"
-        />
       </label>
-      <label class="modal-product-label">
+      <input
+        type="checkbox"
+        name="products"
+        value="ice-coffee"
+        class="modal-product ice-coffee is-hidden"
+        id="ice-coffee"
+      />
+      <label for="ice-coffee" class="modal-product-label ice-coffee">
         <picture>
           <source
             srcset="
@@ -41,14 +49,15 @@
           />
         </picture>
         Ice Coffee
-        <input
-          type="checkbox"
-          name="products"
-          value="ice-coffee"
-          class="modal-product"
-        />
       </label>
-      <label class="modal-product-label">
+      <input
+        type="checkbox"
+        name="products"
+        value="milkshak"
+        class="modal-product milkshak is-hidden"
+        id="milkshak"
+      />
+      <label for="milkshak" class="modal-product-label milkshak">
         <picture>
           <source
             srcset="
@@ -63,21 +72,7 @@
           />
         </picture>
         Milkshakes
-        <input
-          type="checkbox"
-          name="products"
-          value="milkshakes"
-          class="modal-product"
-        />
       </label>
-
-      <input
-        type="checkbox"
-        name="agree"
-        value="agree"
-        id="agree"
-        class="agree-input is-hidden"
-      />
     </div>
 
     <label class="modal-block secondary-text">
@@ -86,7 +81,7 @@
     </label>
     <label class="modal-block secondary-text">
       Phone
-      <input type="tel" name="tel" placeholder="" />
+      <input type="tel" name="tel" placeholder="" required />
     </label>
     <label class="modal-block secondary-text">
       Mail

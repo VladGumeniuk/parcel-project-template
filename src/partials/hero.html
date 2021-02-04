@@ -5,8 +5,20 @@
         ice cream made with <span class="hero-tityl-one">passion</span>
       </h1>
       <div>
-        <button class="hero-btn appeal-one">Products</button>
-        <button class="hero-btn appeal-two">How it’s made?</button>
+        <button
+          class="hero-btn appeal-one"
+          aria-label="Products"
+          onclick="document.location='#products'"
+        >
+          Products
+        </button>
+        <button
+          class="hero-btn appeal-two"
+          aria-label="How it’s made?"
+          onclick="document.location='#how-it-is-made'"
+        >
+          How it’s made?
+        </button>
       </div>
     </div>
     <div class="hero-milk-block">
@@ -25,12 +37,12 @@
           "
           media="(min-width: 768px)"
         />
-        <img src="./images/hero/tab-milk.png" alt="milk" />
+        <img src="./images/hero/tab-milk.png" alt="jug of milk" />
       </picture>
       <p class="hero-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et
-        <button class="btn-arrow">
+        <button class="btn-arrow" aria-label="more details">
           <svg>
             <use href="./images/svg/sprite.svg#icon-right-arrow"></use>
           </svg>
@@ -56,7 +68,7 @@
         srcset="./images/hero/tab-girl.png 1x, ./images/hero/tab-girl@2x.png 2x"
         media="(min-width: 768px)"
       />
-      <img src="./images/hero/tab-girl.png" alt="milk" />
+      <img src="./images/hero/tab-girl.png" alt="girl with icecreame" />
     </picture>
   </div>
 </section>

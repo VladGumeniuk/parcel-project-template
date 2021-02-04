@@ -119,7 +119,7 @@ html {
   }
 }
 
-.cow-text-content-item {
+.cow-text-content-item:not(:last-child) {
   margin-bottom: 16px;
 
   @include for-size(tablet) {
@@ -127,6 +127,17 @@ html {
   }
   @include for-size(desktop) {
     margin-bottom: 35px;
+  }
+}
+
+.cow-text-content-item:last-child {
+  margin-bottom: 23px;
+
+  @include for-size(tablet) {
+    margin-bottom: 60px;
+  }
+  @include for-size(desktop) {
+    margin-bottom: 44px;
   }
 }
 

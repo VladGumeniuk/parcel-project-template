@@ -482,7 +482,7 @@ header .btn {
   background-image: url(../images/hero/mob-icecream.png), radial-gradient(circle farthest-side at 61% 51%, var(--hero-elipse-color) 172px, var(--hero-background-color) 172px);
   background-size: 171px, cover;
   background-repeat: no-repeat;
-  background-position: left 63% bottom 0, left 0 top 0;
+  background-position: left 63% bottom 0;
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 280px) and (max-width: 767px), screen and (min-resolution: 192dpi) and (min-width: 280px) and (max-width: 767px), screen and (min-resolution: 2dppx) and (min-width: 280px) and (max-width: 767px) {
@@ -496,7 +496,7 @@ header .btn {
     height: 399px;
     background-image: url(../images/hero/tab-icecream@2x.png), radial-gradient(circle farthest-side at 61% 48%, var(--hero-elipse-color) 162px, var(--hero-background-color) 162px);
     background-size: 143px, cover;
-    background-position: left 58.5% bottom 0, left 0 top 0;
+    background-position: left 58.5% bottom 0;
   }
 }
 
@@ -505,7 +505,7 @@ header .btn {
     height: 399px;
     background-image: url(../images/hero/tab-icecream.png), radial-gradient(circle farthest-side at 61% 48%, var(--hero-elipse-color) 162px, var(--hero-background-color) 162px);
     background-size: 143px, cover;
-    background-position: left 58.5% bottom 0, left 0 top 0;
+    background-position: left 58.5% bottom 0;
   }
 }
 
@@ -514,7 +514,7 @@ header .btn {
     height: 665px;
     background-image: url(../images/hero/desktop-icecream@2x.png), radial-gradient(circle farthest-side at 58% 48%, var(--hero-elipse-color) 269px, var(--hero-background-color) 269px);
     background-size: 236px, cover;
-    background-position: left 56% bottom 0, left 0 top 0;
+    background-position: left 56% bottom 0;
   }
 }
 
@@ -523,7 +523,7 @@ header .btn {
     height: 665px;
     background-image: url(../images/hero/desktop-icecream.png), radial-gradient(circle farthest-side at 58% 48%, var(--hero-elipse-color) 269px, var(--hero-background-color) 269px);
     background-size: 236px, cover;
-    background-position: left 56% bottom 0, left 0 top 0;
+    background-position: left 56% bottom 0;
   }
 }
 
@@ -1125,19 +1125,35 @@ html {
   }
 }
 
-.cow-text-content-item {
+.cow-text-content-item:not(:last-child) {
   margin-bottom: 16px;
 }
 
 @media screen and (min-width: 768px) {
-  .cow-text-content-item {
+  .cow-text-content-item:not(:last-child) {
     margin-bottom: 20px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .cow-text-content-item {
+  .cow-text-content-item:not(:last-child) {
     margin-bottom: 35px;
+  }
+}
+
+.cow-text-content-item:last-child {
+  margin-bottom: 23px;
+}
+
+@media screen and (min-width: 768px) {
+  .cow-text-content-item:last-child {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .cow-text-content-item:last-child {
+    margin-bottom: 44px;
   }
 }
 
@@ -2139,5 +2155,176 @@ html {
     text-align: center;
     margin: 0 auto;
   }
+}
+
+/* ---------- МОДАЛЬНОЕ ОКНО --------*/
+.backdrop {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  visibility: visible;
+  pointer-events: auto;
+  background: rgba(0, 0, 0, 0.2);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 30px);
+  padding: 40px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 628px;
+  }
+}
+
+.modal h2 {
+  font-size: 20px;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.modal-product-block {
+  display: flex;
+}
+
+.modal-product-label {
+  width: calc(100% / 3 - 10px);
+  min-width: 50px;
+  margin: 5px;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  line-height: 1.76;
+  letter-spacing: 0.04em;
+}
+
+.modal-product-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.modal-product {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+.modal-block {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 0 0;
+}
+
+.modal-block input {
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 10px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #000000;
+}
+
+/* ----- Кнопка закрытия модального окна -------------*/
+.icon-x {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-x svg {
+  height: 18px;
+  width: 18px;
+  fill: #000000;
+}
+
+.icon-x:hover svg,
+.icon-x:focus svg {
+  fill: #000000;
+}
+
+.modal .btn {
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 161px;
+}
+
+.agree {
+  margin-top: 20px;
+}
+
+.agree-input {
+  margin: 0;
+}
+
+.agree-label {
+  display: inline-block;
+  margin-left: 7px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.16;
+  color: var(--text-grey-color);
+  letter-spacing: 0.04em;
+}
+
+.agree-label::before {
+  display: inline-block;
+  content: '';
+  vertical-align: middle;
+  margin-right: 17px;
+  height: 15px;
+  width: 16px;
+  border: 1px solid var(--text-grey-color);
+  background-color: #ffffff;
+  background-position: 50% 50%;
+}
+
+.agree-input:checked + .agree-label::before {
+  background-image: url(../images/svg/icon-ice-cream.png);
+  border: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */

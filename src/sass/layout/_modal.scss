@@ -41,13 +41,18 @@
 
   @media screen and (min-width: 1200px) {
     width: 628px;
+    overflow-y: scroll;
   }
 }
 
 .modal h2 {
-  font-size: 20px;
+  font-family: $secondary-font;
+  font-size: 16px;
   line-height: 1.15;
   margin-bottom: 12px;
+  @media screen and (min-width: 1200px) {
+    font-size: 25px;
+  }
 }
 
 .modal-product-block {
@@ -59,17 +64,46 @@
   min-width: 50px;
   margin: 5px;
   text-align: center;
-  font-family: $main-font;
-  font-size: 20px;
+  font-family: $secondary-font;
+  font-size: 12px;
   line-height: 1.76;
   letter-spacing: 0.04em;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    margin: 5px auto 0 auto;
+    height: 16px;
+    width: 16px;
+    border: 1px solid var(--text-grey-color);
+    background-color: #ffffff;
+    background-position: 50% 50%;
+  }
+}
+
+.ice-cream:checked + .ice-cream::after {
+  background-image: url(../images/svg/icon-cupcake.png);
+  border: #ffffff;
+}
+
+.ice-coffee:checked + .ice-coffee::after {
+  background-image: url(../images/svg/icon-cupcake.png);
+  border: #ffffff;
+}
+
+.milkshak:checked + .milkshak::after {
+  background-image: url(../images/svg/icon-cupcake.png);
+  border: #ffffff;
 }
 
 .modal-product-img {
   display: block;
   max-width: 100%;
   height: auto;
-  margin-bottom: 10px;
 }
 
 .modal-product {
@@ -90,7 +124,7 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 10px;
-  height: 40px;
+  height: 35px;
   font-size: 14px;
   line-height: 1.14;
   color: #000000;
@@ -133,12 +167,6 @@
   width: 161px;
 }
 
-// .modal-button {
-//   margin-top: 30px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
 .agree {
   margin-top: 20px;
 }
@@ -151,25 +179,31 @@
   display: inline-block;
   margin-left: 7px;
   font-family: $main-font;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.16;
   color: var(--text-grey-color);
   letter-spacing: 0.04em;
-}
 
-.agree-label::before {
-  display: inline-block;
-  content: '';
-  vertical-align: middle;
-  margin-right: 17px;
-  height: 15px;
-  width: 16px;
-  border: 1px solid var(--text-grey-color);
-  background-color: #ffffff;
-  background-position: 50% 50%;
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
+
+  &::before {
+    display: inline-block;
+    content: '';
+    vertical-align: middle;
+    margin-right: 17px;
+    height: 16px;
+    width: 16px;
+    border: 1px solid var(--text-grey-color);
+    background-color: #ffffff;
+    background-position: 50% 50%;
+  }
 }
 
 .agree-input:checked + .agree-label::before {
+  height: 24px;
+  width: 24px;
   background-image: url(../images/svg/icon-ice-cream.png);
   border: #ffffff;
 }

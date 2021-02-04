@@ -7,5 +7,5 @@ $('.review-slider').slick({
   slidesToScroll: 1,
   autoplay: true,
     autoplaySpeed: 4000,
-  dots: true
+  dots: true, arrows: false
 });

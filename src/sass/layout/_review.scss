@@ -41,8 +41,10 @@
   padding-right: 0px;
   background-image: repeating-linear-gradient(
     to top,
-    #e1e1e1 0px 1px,
-    transparent 1px 36px
+    #e1e1e1 0px,
+    #e1e1e1 1px,
+    transparent 1px,
+    transparent 36px
   );
 }
 
@@ -118,8 +120,10 @@
     padding: 0 4px;
     background-image: repeating-linear-gradient(
       to top,
-      #e1e1e1 0px 1px,
-      transparent 1px 31px
+      #e1e1e1 0px,
+      #e1e1e1 1px,
+      transparent 1px,
+      transparent 31px
     );
   }
 }

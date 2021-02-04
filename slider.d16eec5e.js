@@ -126,7 +126,8 @@ $('.review-slider').slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 4000,
-  dots: true
+  dots: true,
+  arrows: false
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -156,7 +157,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "14778" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "11222" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

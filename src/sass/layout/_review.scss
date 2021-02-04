@@ -13,10 +13,22 @@
   background-color: var(--slider-background-color);
   margin-top: 29px;
   margin-bottom: 52px;
+  position: relative;
+  z-index: -2;
+  margin: 29px auto 30px;
 }
 
 .review-img {
   margin: 0 auto;
+}
+
+.review-wrapper-svg {
+  display: block;
+  fill: #e1e1e1;
+  position: absolute;
+  top: 28px;
+  left: 61px;
+  z-index: -1;
 }
 
 .review-text {
@@ -85,7 +97,12 @@
   .review-wrapper {
     width: 620px;
     margin: 19px auto 42px;
-    padding: 47px 75px 27px;
+    padding: 47px 60px 34px;
+  }
+
+  .review-wrapper-svg {
+    top: 30px;
+    left: 40px;
   }
 
   // .review-wrapper-text {
@@ -98,7 +115,7 @@
     line-height: 216%;
     text-align: center;
     letter-spacing: 0.04em;
-    padding: 0 24px;
+    padding: 0 4px;
     background-image: repeating-linear-gradient(
       to top,
       #e1e1e1 0px 1px,
@@ -119,6 +136,12 @@
   .review-wrapper {
     width: 926px;
     margin: 19px auto 0px;
+    padding: 47px 54px 27px 59px;
+  }
+
+  .review-wrapper-svg {
+    top: 32px;
+    left: 50px;
   }
 
   .review-text {
@@ -127,7 +150,7 @@
     line-height: 186%;
     text-align: center;
     letter-spacing: 0.04em;
-    padding: 0 4px;
+    padding: 0 21px;
   }
 }
 
@@ -145,4 +168,8 @@
 .slick-dots li button:hover::before {
   opacity: 0.75;
   color: #d31342;
+}
+
+.slick-dots li button:before {
+  line-height: 23px;
 }

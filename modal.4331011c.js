@@ -121,10 +121,16 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 (function () {
   var refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
+    openModalBtn1: document.querySelector('[data-modal-open1]'),
+    openModalBtn2: document.querySelector('[data-modal-open2]'),
+    openModalBtn3: document.querySelector('[data-modal-open3]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
     modal: document.querySelector('[data-modal]')
   };
   refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.openModalBtn1.addEventListener('click', toggleModal);
+  refs.openModalBtn2.addEventListener('click', toggleModal);
+  refs.openModalBtn3.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
@@ -159,7 +165,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "11222" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "4665" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
